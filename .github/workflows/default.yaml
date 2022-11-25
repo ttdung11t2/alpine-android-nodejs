@@ -35,3 +35,5 @@ jobs:
         file: ./docker/base.Dockerfile
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
+        build-args: |
+          JDK_VERSION=11
