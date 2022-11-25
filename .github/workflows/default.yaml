@@ -31,5 +31,7 @@ jobs:
         DOCKER_BUILDKIT: 1
       with:
         push: true
+        context: ./docker
+        file: ./docker/base.Dockerfile
         tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
